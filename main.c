@@ -62,6 +62,7 @@ int main(int argc, char** argv)
         gettimeofday(&start_time,NULL);
         
         // TODO: write the time to the IPC
+        memcpy(ipc_ptr,&start_time,sizeof(start_time));
         
         // TODO: get the list of arguments to be used in execvp() and 
         // execute execvp()
@@ -76,7 +77,6 @@ int main(int argc, char** argv)
         wait(&status);
         
         // TODO: get the current time using gettimeofday
-        
         gettimeofday(&current_time, NULL);
         
         // TODO: read the start time from IPC
