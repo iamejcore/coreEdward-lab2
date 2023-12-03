@@ -59,7 +59,8 @@ int main(int argc, char** argv)
     }
     else if (pid == 0) { /*child process */
         // TODO: use gettimeofday to log the start time
-
+        gettimeofday(&start_time,NULL);
+        
         // TODO: write the time to the IPC
         
         // TODO: get the list of arguments to be used in execvp() and 
@@ -79,6 +80,7 @@ int main(int argc, char** argv)
         gettimeofday(&current_time, NULL);
         
         // TODO: read the start time from IPC
+        memcpy(&start_time,ipc_ptr,sizeof(start_time));
         
         // TODO: close IPC
         ipc_close();
