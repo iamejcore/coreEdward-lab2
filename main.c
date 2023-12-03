@@ -64,7 +64,10 @@ int main(int argc, char** argv)
         
         // TODO: get the list of arguments to be used in execvp() and 
         // execute execvp()
-
+        command_args = get_arguments(argc, argv);
+        command = argv[0];
+        
+        execvp(command, command_args);
     }
     else { /* parent process */
         // TODO: have parent wait and get status of child.
