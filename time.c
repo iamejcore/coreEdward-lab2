@@ -2,6 +2,6 @@
 
 double elapsed_time(struct timeval* start_time, struct timeval* end_time){
     //TODO: return the difference between end_time and start_time.
+    double startsec = (start_time->tv_sec * 1000000.0)  + start_time->tv_usec, 
     
-    return 0.0;
 }
