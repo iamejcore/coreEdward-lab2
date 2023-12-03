@@ -75,6 +75,8 @@ int main(int argc, char** argv)
         
         // TODO: get the current time using gettimeofday
         
+        gettimeofday(&current_time, NULL);
+        
         // TODO: read the start time from IPC
         
         // TODO: close IPC
