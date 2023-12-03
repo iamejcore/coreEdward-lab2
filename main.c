@@ -48,6 +48,7 @@ int main(int argc, char** argv)
     
     // TODO: call ipc_create to create shared memory region to which parent
     //       child have access.
+    ipc_ptr = ipc_create(sizeof(start_time));
 
     /* fork a child process */
     pid = fork();
