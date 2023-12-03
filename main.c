@@ -71,7 +71,8 @@ int main(int argc, char** argv)
     }
     else { /* parent process */
         // TODO: have parent wait and get status of child.
-        //       Use the variable status to store status of child. 
+        //       Use the variable status to store status of child.
+        wait(&status);
         
         // TODO: get the current time using gettimeofday
         
