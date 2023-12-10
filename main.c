@@ -43,6 +43,7 @@ int main(int argc, char** argv)
         fprintf(stderr,"SYNOPSIS: %s <cmd> <cmd arguments>\n",argv[0]);
         return 1;
     }
+
     
     // TODO: call ipc_create to create shared memory region to which parent
     //       child have access.
